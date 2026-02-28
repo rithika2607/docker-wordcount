@@ -16,3 +16,5 @@ spec:
       - name: wordcount-container
         image: wordcount-app
         imagePullPolicy: Never
+        command: ["/bin/sh"]
+        args: ["-c", "python script.py && tail -f /dev/null"]
